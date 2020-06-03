@@ -106,7 +106,7 @@ func Main(configPath string, configTest bool, buildVersion string) {
 		config.CatchHUP()
 
 		// set up our tun dev
-		tun, err = newTun(
+		tun, err = NewTun(
 			config.GetString("tun.dev", ""),
 			tunCidr,
 			config.GetInt("tun.mtu", DEFAULT_MTU),
